@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">CategoryId</th>
+            <th scope="col">Trademark</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pro in Model)
+        {
+        <tr>
+            <td>@pro.Name</td>
+            <td>@pro.CategoryId</td>
+            <td>@pro.Trademark</td>
+            <td>@pro.Price</td>
+        </tr>
+        }
+    </tbody>
+</table>

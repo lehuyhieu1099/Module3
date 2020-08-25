@@ -1,0 +1,48 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<form class="form-horizontal" asp-controller="Account" asp-action="Register" method="POST">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <fieldset>
+       
+        <div class="control-group">
+            <!-- E-mail -->
+            <label class="control-label" asp-for="Email"></label>
+            <div class="controls">
+                <input type="text" asp-for="Email" placeholder="Input Email" class="input-xlarge">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Password-->
+            <label class="control-label" asp-for="Password"></label>
+            <div class="controls">
+                <input type="password" asp-for="Password" placeholder="Password" class="input-xlarge">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Password -->
+            <label class="control-label" asp-for="ConfirmPassword"></label>
+            <div class="controls">
+                <input type="password" asp-for="ConfirmPassword" placeholder="" class="input-xlarge">
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Button -->
+            <div class="controls">
+                <button class="btn btn-success">Register</button>
+            </div>
+        </div>
+        <div class="container signin">
+            <p>Already have an account? <a href="#">Sign in</a>.</p>
+        </div>
+    </fieldset>
+</form>
+
